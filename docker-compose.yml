@@ -9,3 +9,10 @@ services:
       MYSQL_ROOT_PASSWORD: "P@ssw0rd#1"
     ports:
      - 3306:3306
+    networks:
+      ipaddr:
+        ipv4_address: 172.17.0.2
+networks:
+  ipaddr:
+    external:
+      name: docker1
