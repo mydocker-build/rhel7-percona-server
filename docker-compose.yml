@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  psdbmysql:
+    image: rhel7-percona-server:8.0.13
+    volumes:
+      - /srv/docker-data/psdbmysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "P@ssw0rd#1"
+    ports:
+     - 3306:3306
